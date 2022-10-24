@@ -2,7 +2,8 @@ local mod_storage = canonical_name.mod_storage
 local cache = {}
 
 if not mod_storage:get(":initialized") then
-	minetest.register_on_mods_loaded(function()
+	-- on_mods_loaded is too early
+	minetest.after(0, function()
 		local auth_handler = minetest.get_auth_handler()
 		for name in auth_handler:iterate() do
 			local lower = name:lower()
