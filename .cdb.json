@@ -1,0 +1,5 @@
+{
+    "type": "MOD",
+    "title": "canonical_name",
+    "short_description": "get the proper capitalization of a player's name"
+}
