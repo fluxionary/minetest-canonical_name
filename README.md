@@ -1,3 +1,3 @@
 # canonical_name
 
-get the proper capitalization of a player's name
+api to get the proper capitalization of a name
