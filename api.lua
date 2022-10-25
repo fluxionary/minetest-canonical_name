@@ -16,14 +16,16 @@ if not mod_storage:get(":initialized") then
 end
 
 minetest.register_on_authplayer(function(name, ip, is_success)
-	if is_success then
-		local lower = name:lower()
-		if not cache[lower] then
-			cache[lower] = name
+	if not is_success then
+		return
+	end
 
-			if not mod_storage:get(lower) then
-				mod_storage:set_string(lower, name)
-			end
+	local lower = name:lower()
+	if not cache[lower] then
+		cache[lower] = name
+
+		if not mod_storage:get(lower) then
+			mod_storage:set_string(lower, name)
 		end
 	end
 end)
@@ -31,12 +33,15 @@ end)
 function canonical_name.get(name)
 	local lower = name:lower()
 	local cached = cache[lower]
+
 	if cached then
 		return cached
 	end
+
 	cached = mod_storage:get(lower)
+
 	if cached then
-		cache[lower] = name
+		cache[lower] = cached
 		return cached
 	end
 end
