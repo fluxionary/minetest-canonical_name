@@ -5,7 +5,7 @@ local S = minetest.get_translator(modname)
 canonical_name = {
 	author = "flux",
 	license = "AGPL_v3",
-	version = {year = 2022, month = 9, day = 15},
+	version = os.time({year = 2022, month = 10, day = 26}),
 	fork = "flux",
 
 	modname = modname,
