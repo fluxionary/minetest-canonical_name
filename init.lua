@@ -5,23 +5,22 @@ local S = minetest.get_translator(modname)
 canonical_name = {
 	author = "flux",
 	license = "AGPL_v3",
-	version = os.time({year = 2022, month = 10, day = 26}),
+	version = os.time({ year = 2022, month = 10, day = 26 }),
 	fork = "flux",
 
 	modname = modname,
 	modpath = modpath,
-    mod_storage = minetest.get_mod_storage(),
+	mod_storage = minetest.get_mod_storage(),
 	S = S,
 
-	has = {
-	},
+	has = {},
 
 	log = function(level, messagefmt, ...)
 		return minetest.log(level, ("[%s] %s"):format(modname, messagefmt:format(...)))
 	end,
 
 	dofile = function(...)
-		return dofile(table.concat({modpath, ...}, DIR_DELIM) .. ".lua")
+		return dofile(table.concat({ modpath, ... }, DIR_DELIM) .. ".lua")
 	end,
 }
 
