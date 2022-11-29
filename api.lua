@@ -1,4 +1,5 @@
-local mod_storage = canonical_name.mod_storage
+local private_state = ...
+local mod_storage = private_state.mod_storage
 local cache = {}
 
 if not mod_storage:get(":initialized") then
