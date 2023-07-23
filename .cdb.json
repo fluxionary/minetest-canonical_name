@@ -6,6 +6,6 @@
     "repo": "https://github.com/fluxionary/minetest-canonical_name.git",
     "website": "https://github.com/fluxionary/minetest-canonical_name",
     "issue_tracker": "https://github.com/fluxionary/minetest-canonical_name/issues",
-    "license": "AGPL-3.0-or-later",
+    "license": "LGPL-3.0-or-later",
     "media_license": "CC-BY-SA-4.0"
 }
